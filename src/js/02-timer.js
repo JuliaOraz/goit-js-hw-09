@@ -3,6 +3,7 @@ import flatpickr from "flatpickr";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // Дополнительный импорт стилей
 import "flatpickr/dist/flatpickr.min.css";
+console.log(flatpickr)
 
 const refs = {
     btnStartTimer: document.querySelector('button[data-start]'),
