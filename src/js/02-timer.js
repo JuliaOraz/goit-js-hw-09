@@ -3,7 +3,6 @@ import flatpickr from "flatpickr";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // Дополнительный импорт стилей
 import "flatpickr/dist/flatpickr.min.css";
-console.log(flatpickr)
 
 const refs = {
     btnStartTimer: document.querySelector('button[data-start]'),
@@ -21,13 +20,15 @@ let timerId = null;
 let chooseDate = null;
 
 // Вывод календаря в инпуте
-flatpickr(refs.dataTimePicker, options = {
+const options = {
     enableTime: true,
     time_24hr: true,
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose,
-});
+}  
+
+flatpickr(refs.dataTimePicker, options);
 
 // Проверка выбранной даты
 function onClose(selectedDates) { 
